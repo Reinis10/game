@@ -2,15 +2,25 @@
 require 'minitest/autorun'
 require_relative 'game'
 
+class TestPlayer < MiniTest::Unit::TestCase
+  def self.test_order
+    :alpha
+  end
 
+#Initialize new player object - Player.new(level, gold, health, damage)
 
+  def test_exists
+    assert_kind_of Player, Player.new(1, 0, 100, 1)
+  end
 
+  def test_level_is_retrievable
+    assert_equal 1, Player.new(1, 0, 100, 1)
+  end
 
-
-
-bjksadvkj
-
-
+  def test_gold_is_retrievable
+    assert_equal 10, Player.new(1, 10, 100, 1)
+  end
+end
 
 
 
