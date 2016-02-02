@@ -10,15 +10,19 @@ class TestPlayer < MiniTest::Unit::TestCase
 #Initialize new player object - Player.new(level, gold, health, damage)
 
   def test_exists
-    assert_kind_of Player, Player.new(1, 0, 100, 1)
+    assert_kind_of Player, Player.new(1, 0, 100, 0)
   end
 
   def test_level_is_retrievable
-    assert_equal 1, Player.new(1, 0, 100, 1)
+    assert_equal 1, Player.new(1, 0, 100, 0)
   end
 
   def test_gold_is_retrievable
-    assert_equal 10, Player.new(1, 10, 100, 1)
+    assert_equal 10, Player.new(1, 10, 100, 0)
+  end
+
+  def test_dead_if_0_health
+    assert_equal dead, Player.new(1, 0, 0, 0)
   end
 end
 
