@@ -2,6 +2,21 @@
 require 'minitest/autorun'
 require_relative 'game'
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+=begin
 class TestGame < MiniTest::Unit::TestCase
   def self.test_order
     :alpha
@@ -37,3 +52,5 @@ class TestGame < MiniTest::Unit::TestCase
 
 
 end
+=end
+
